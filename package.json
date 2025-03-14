@@ -1,0 +1,22 @@
+{
+  "name": "cse341-project",
+  "version": "1.0.0",
+  "description": "CSE341 Project 1",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffrey-thomas/cse341-project.git"
+  },
+  "author": "Jeff Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffrey-thomas/cse341-project/issues"
+  },
+  "homepage": "https://github.com/jeffrey-thomas/cse341-project#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
