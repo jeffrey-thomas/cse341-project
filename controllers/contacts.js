@@ -6,6 +6,7 @@ const mongo = getDbClient();
 
 export const contactsController = {
   getAll: async (req, res) => {
+    //#swagger.tags=['Contacts']
     const result = await mongo.db("cse341").collection("contacts").find();
     result.toArray().then((contacts) => {
       res.setHeader("Content-Type", "application/json");
@@ -14,6 +15,7 @@ export const contactsController = {
   },
 
   getSingle: async (req, res) => {
+    //#swagger.tags=['Contacts']
     const contactId = new ObjectId(req.params.id);
     const result = await mongo
       .db("cse341")
@@ -26,6 +28,7 @@ export const contactsController = {
   },
 
   createContact: async (req, res) => {
+    //#swagger.tags=['Contacts']
     const contact = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -52,6 +55,7 @@ export const contactsController = {
   },
 
   updateContact: async (req, res) => {
+    //#swagger.tags=['Contacts']
     const contactId = new ObjectId(req.params.id);
     console.log(req.params.id);
     const contact = {
@@ -80,6 +84,7 @@ export const contactsController = {
   },
 
   deleteContact: async (req, res) => {
+    //#swagger.tags=['Contacts']
     const contactId = new ObjectId(req.params.id);
 
     const response = await mongo
