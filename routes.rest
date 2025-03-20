@@ -1,1 +1,69 @@
+//LOCAL
+
+###Get All
+GET http://localhost:3000/contacts
+
+###Get Single
+GET http://localhost:3000/contacts/67d49d8eeeae9a3d4c27f064
+
+###Create Contact
+POST http://localhost:3000/contacts HTTP/1.1
+content-Type: application/json
+
+{
+    "firstName":"Jeff",
+    "lastName":"Thomas",
+    "email": "jthomas8@byupathway.edu",
+    "favoriteColor":"red",
+    "birthday":"March 25"
+}
+
+###Update Contact
+PUT http://localhost:3000/contacts/67db651e35ee7a0e62c390e5 HTTP/1.1
+content-Type: application/json
+
+{
+    "firstName":"Jeffrey",
+    "lastName":"Thomas",
+    "email": "jthomas8@byupathway.edu",
+    "favoriteColor":"red",
+    "birthday":"March 25"
+}
+
+###Delete Contact
+DELETE http://localhost:3000/contacts/67db651e35ee7a0e62c390e5
+
+//RENDER
+
+###Get All
 GET https://cse341-project-ex42.onrender.com/contacts
+
+###Get Single
+GET GET https://cse341-project-ex42.onrender.com/contacts/67d49d8eeeae9a3d4c27f064
+
+###Create Contact
+POST GET https://cse341-project-ex42.onrender.com/contacts HTTP/1.1
+content-Type: application/json
+
+{
+    "firstName":"Jeff",
+    "lastName":"Thomas",
+    "email": "jthomas8@byupathway.edu",
+    "favoriteColor":"red",
+    "birthday":"March 25"
+}
+
+###Update Contact
+PUT GET https://cse341-project-ex42.onrender.com/contacts HTTP/1.1
+content-Type: application/json
+
+{
+    "firstName":"Jeffrey",
+    "lastName":"Thomas",
+    "email": "jthomas8@byupathway.edu",
+    "favoriteColor":"red",
+    "birthday":"March 25"
+}
+
+###Delete Contact
+DELETE GET https://cse341-project-ex42.onrender.com/contacts/67db651e35ee7a0e62c390e5
